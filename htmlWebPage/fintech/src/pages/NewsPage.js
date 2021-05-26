@@ -13,10 +13,11 @@ const NewsPage = () => {
     console.log(value);
     setSearchText(value);
   };
+
   const handleClickSearchButton = () => {
     //   axios 요청 보내기
     console.debug("test");
-    let newsUrl = `https://newsapi.org/v2/everything?from=2021-04-26&sortBy=publishedAt&q=${searchText}&apiKey=921be7b181dc4a5ba73ba4c1ee91027c&language=ko`;
+    let newsUrl = `https://newsapi.org/v2/everything?from=2021-04-26&sortBy=publishedAt&q=${searchText}&apiKey=78bc6ddd8cdb48ceac76f5f9b9dfc4c5&language=ko`;
     axios.get(newsUrl).then((response) => {
       let resultNewsList = response.data.articles;
       setnews(resultNewsList);
